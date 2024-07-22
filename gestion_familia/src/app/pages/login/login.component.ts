@@ -38,13 +38,14 @@ export class LoginComponent {
         localStorage.setItem('token', rta.access_token);
 
         const decodedToken: any = jwtDecode(rta.access_token);
-        localStorage.setItem('id', decodedToken.sub.id);
-        localStorage.setItem('nombre', decodedToken.sub.nombre);
-        localStorage.setItem('apellido', decodedToken.sub.apellido);
+        console.log(decodedToken.id)
+        localStorage.setItem('id', decodedToken.id);
+        localStorage.setItem('nombre', decodedToken.nombre);
+        localStorage.setItem('apellido', decodedToken.apellido);
 
         this.router.navigateByUrl('vOperaciones');
         console.log(decodedToken)
-      }, error: (err) => {
+      }, error: (error) => {
         localStorage.removeItem('token');
         localStorage.removeItem('id');
         localStorage.removeItem('nombre');
