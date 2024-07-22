@@ -1,0 +1,52 @@
+<nav class="fixed-top">
+    <div class="container-fluid div_principal">
+      <ul class="navbar-nav nav_1-item-extremo">
+        <li class="nav-item">
+          <a class="nav-link btn" [class.mini_logo-box]="!rutaText" [class.logo-box]="rutaText" [routerLink]="['/vPerfil']">
+            <p class="logo-p" *ngIf="rutaText">{{usuarioNombre}} {{usuarioApellido}}</p>
+            <p class="logo-p" *ngIf="!rutaText">{{usuarioNombre[0]}} {{usuarioApellido[0]}}</p>
+          </a>
+        </li>
+      </ul>
+      <h2 class="nav_1-item-central titulo_nav"><b>Gestión</b>
+      Hermanos
+      </h2>
+      <ul class="navbar-nav nav_1-item-extremo">
+        <li class="nav-item">
+          <a class="nav-link btn_closeSesion d-flex" (click)="cerrarSesion()">
+            <span class="material-symbols-outlined">logout</span>
+            <p class="nav_1-sesion" *ngIf="rutaText">Cerrar Sesión</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="container-fluid">
+      <ul class="navbar-nav fs-5 flex-row">
+        <li class="nav-item">
+          <a routerLink="/vUsuario" class="nav-link custom-btn" [class.inView]="!rutaUsuario">
+            <span class="nav_icon material-symbols-outlined">group</span>
+            <span class="nav_text" *ngIf="rutaText">USUARIOS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/vOperaciones" class="nav-link custom-btn" [class.inView]="!rutaOperacion">
+            <span class="nav_icon material-symbols-outlined">receipt_long</span>
+            <span class="nav_text" *ngIf="rutaText">OPERACIONES</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/vCategorias" class="nav-link custom-btn" [class.inView]="!rutaCategoria">
+            <span class="nav_icon material-symbols-outlined">category</span>
+            <span class="nav_text" *ngIf="rutaText">CATEGORIAS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/vArchivos" class="nav-link custom-btn" [class.inView]="!rutaArchivo">
+            <span class="nav_icon material-symbols-outlined">folder_copy</span>
+            <span class="nav_text" *ngIf="rutaText">ARCHIVOS</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
