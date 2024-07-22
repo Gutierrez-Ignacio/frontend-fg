@@ -42,7 +42,7 @@ export class LoginComponent {
         localStorage.setItem('nombre', decodedToken.sub.nombre);
         localStorage.setItem('apellido', decodedToken.sub.apellido);
 
-        this.router.navigateByUrl('vOperacion');
+        this.router.navigateByUrl('vOperaciones');
         console.log(decodedToken)
       }, error: (err) => {
         localStorage.removeItem('token');
@@ -50,7 +50,7 @@ export class LoginComponent {
         localStorage.removeItem('nombre');
         localStorage.removeItem('apellido');
       }, complete: () => {
-        console.log('Finzalizo')
+        console.log('Finalizo')
       }
     })
   }
@@ -64,6 +64,6 @@ export class LoginComponent {
   }
 
   resetpassword() {
-    this.router.navigateByUrl('vResetpassword');
+    this.router.navigateByUrl('vResetPassword');
   }
 }
