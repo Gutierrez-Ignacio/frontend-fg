@@ -1,0 +1,16 @@
+.contenido-despues-de-nav {
+    margin-top: 90px;
+}
+
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    margin-inline: 10px;
+  }
