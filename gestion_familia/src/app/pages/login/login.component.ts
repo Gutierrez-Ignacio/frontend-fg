@@ -21,7 +21,7 @@ export class LoginComponent {
     new FormGroup(
       {
         email: new FormControl('familiagutisistema@gmail.com', [Validators.required, Validators.email]),
-        password: new FormControl('IBexkXSV', Validators.required)
+        password: new FormControl('nuevaContraseña1', Validators.required)
       }
     )
   );
