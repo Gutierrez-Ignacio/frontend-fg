@@ -1,0 +1,146 @@
+.contenido-despues-de-nav {
+    margin-top: 90px;
+  }
+  
+  h4 {
+    text-align: center;
+    padding: 25px 0px 15px 0px;
+  }
+  
+  .invalid-feedback {
+    margin: -5px 0px 0px 0px
+  }
+  
+  .input-group {
+    margin-left: 10px;
+  }
+  
+  .form-floating {
+    margin-right: 20px;
+  }
+  
+  .btn-custom {
+    padding: 10px 20px;
+    color: #2C74B3;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  .btn-custom:hover {
+    color: #205295;
+  }
+  
+  .btn-custom:active {
+    color: #0A2647;
+  }
+  
+  .btn-primary {
+    margin: 0px 10px 10px 10px;
+    background-color: #2C74B3;
+    border-color: #2C74B3;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #205295;
+    border-color: #205295;
+    color: #ffffff;
+  }
+  
+  .btn-primary:active {
+    background-color: #0A2647;
+    border-color: #0A2647;
+    color: #ffffff;
+  }
+  
+
+
+  /*00000000000000000000000000000000000000000000000000000000000*/
+  .pword_div {
+    padding: 10px;
+    display: flex;
+    justify-content: center
+  }
+  .pword_text {
+    position: relative;
+    top: 6px;
+    left: 10px;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .form_wight_perfil {
+    width: 505px;
+  }
+  
+  .form_wight_perfil_phone {
+    width: 340px;
+  }
+  
+  .btn_correction {
+    margin: 0px;
+  } 
