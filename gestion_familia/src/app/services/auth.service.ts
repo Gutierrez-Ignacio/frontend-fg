@@ -30,13 +30,19 @@ export class AuthService {
     return this.httpClient.post(this.url + '/auth/reset-password', userMail);
   }
 
-  changePassword(newPassword_token: any, passwordData: any, id: number) {
-
+  confirmResetPassword(token: any, newPassword: any) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${newPassword_token}`
     });
-    return this.httpClient.put(this.url + '/auth/change-password/' + id, passwordData, { headers: headers });
+    return this.httpClient.post(this.url + '/auth/reset-password/confirm', { token, new_password: newPassword }, { headers: headers });
+  }
+
+  changePassword(id: number, newPassword: string, token: string) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return this.httpClient.put(this.url + '/auth/change-password/' + id,  { new_password: newPassword }, { headers: headers });
   }
 
 }
