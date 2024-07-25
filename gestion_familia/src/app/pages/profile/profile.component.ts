@@ -1,7 +1,7 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { JsonPipe, NgIf } from '@angular/common';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../services/user/user.service';
 import { HostListener } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet, Router } from '@angular/router';

@@ -1,6 +1,6 @@
 import { JsonPipe, NgIf } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet, Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';

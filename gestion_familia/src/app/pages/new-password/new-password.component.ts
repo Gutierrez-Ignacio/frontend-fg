@@ -2,7 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component, signal, OnInit, OnDestroy} from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet, Router, Route, ActivatedRoute } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
