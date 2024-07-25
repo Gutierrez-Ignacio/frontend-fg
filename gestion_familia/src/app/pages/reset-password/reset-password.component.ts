@@ -16,6 +16,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './reset-password.component.css'
 })  
 export class ResetPasswordComponent {
+  isLoading: boolean = false;
 
   constructor(
     private router: Router,
@@ -32,17 +33,19 @@ export class ResetPasswordComponent {
 
   submit() {
     if (this.mailForm().valid) {
-      console.log(this.mailForm().value);
+      this.isLoading = true;
       this.authService.resetPassword(this.mailForm().value).subscribe(
         response => {
           console.log('Response:', response);
+          this.isLoading = false;
           this.goLogin()
         },
         error => {
           console.error('Error:', error);
+          this.isLoading = false;
+          this.goLogin()
         }
-      );
-      this.goLogin()
+      );  
     }
   } 
   

@@ -19,9 +19,9 @@ import { Subject } from 'rxjs';
 })
 export class NewPasswordComponent {
   pass0k: string = '';
-
   resetToken: string = '';
-
+  isLoading: boolean = false;
+  
   private unsubscribe$ = new Subject<void>();
 
   constructor(
@@ -58,15 +58,18 @@ export class NewPasswordComponent {
   submit(): void {
     const password1 = this.passwordForm().value.password1;
     const password2 = this.passwordForm().value.password2;
-  
+
     if (password1 === password2 && password1 !== "") {
+      this.isLoading = true;
       this.authService.confirmResetPassword(this.resetToken, password1)
         .pipe(takeUntil(this.unsubscribe$))
         .subscribe(response => {
           console.log('Contraseña restablecida exitosamente', response);
+          this.isLoading = false;
           this.router.navigateByUrl('login');
         }, error => {
           console.error('Error al restablecer la contraseña', error);
+          this.isLoading = false;
         });
     } else {
       alert("Ingrese una contraseña válida");
