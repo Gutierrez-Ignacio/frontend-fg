@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { NgIf } from '@angular/common';
 
